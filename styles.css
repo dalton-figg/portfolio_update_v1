@@ -142,13 +142,15 @@ a:where(:hover, :focus) {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: #0399ff;
   color: white;
   padding: 0.5rem;
 }
 
-.skills li:nth-child(odd) {
-  background: #0399ff;
+/* Removing alternating colors in favour of better consistency */
+
+.skills li:where(:hover, :focus) {
+  background: #0279c8;
 }
 
 .footer {
@@ -191,7 +193,7 @@ a:where(:hover, :focus) {
   }
 }
 
-.glide{
+.glide {
   max-width: 1000px;
 }
 
