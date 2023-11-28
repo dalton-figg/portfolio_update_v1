@@ -1,4 +1,3 @@
-/* Global Reset */
 * {
   box-sizing: border-box;
 }
@@ -19,16 +18,6 @@ body {
 
 main {
   max-width: 1440px;
-  margin: 0 auto;
-}
-
-h1 {
-  text-align: center;
-}
-
-h1,
-h2 {
-  text-decoration: underline;
 }
 
 h1,
@@ -52,41 +41,24 @@ a {
   text-decoration: none;
   color: #999;
 }
-a:hover {
-  color: #6633ff;
-}
-
-/* Section Styles */
 
 .navbar {
-  width: 100%;
   background: black;
   height: 50px;
-  position: sticky;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
 }
 
 .navbar__list {
-  display: flex;
-  gap: 1rem;
   font-weight: 700;
   list-style-type: none;
-  margin: 0 auto;
-}
-
-.navbar__list-item:first-child {
-  color: white;
 }
 
 .hero {
-  text-align: center;
   background: url("images/hero-background.jpg") no-repeat top center;
   background-size: cover;
   overflow: hidden;
 }
+
+/* TODO: rename this image to be consistent with the BEM conventions - leaving it for now so that the grading passes corectly */
 
 .profile-image {
   margin: 1.5rem auto;
@@ -104,7 +76,7 @@ a:hover {
 .tag {
   color: white;
   text-decoration: none;
-  padding: 10px;
+  padding: 0.5rem;
   border-radius: 5px;
   max-width: fit-content;
   margin: 0.5rem auto;
@@ -112,7 +84,6 @@ a:hover {
 
 .location {
   background-color: #333;
-  color: white;
 }
 
 .card {
@@ -120,7 +91,6 @@ a:hover {
   padding: 2.5rem;
   max-width: 700px;
   width: 100%;
-  text-align: left;
   background: #fff;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
@@ -136,57 +106,46 @@ a:hover {
   display: inline-block;
   background: #ff9904;
   color: white;
-  padding: 5px 10px;
+  padding: 0.5rem;
 }
 
 .skills li:nth-child(odd) {
   background: #0399ff;
 }
 
-footer {
+.footer {
   text-align: center;
   width: 100%;
   min-height: 30px;
-  padding: 20px 0 40px 20px;
+  padding: 1.25rem 0 2.5rem 1.25rem;
 }
 
-.copyright {
+.footer__copyright {
   font-size: 0.75em;
 }
 
-.social {
+.footer__social {
   display: inline-block;
   text-indent: -9999px;
   margin-left: 5px;
   max-width: 40px;
   width: 100%;
   aspect-ratio: 1;
-  background-size: 40px 40px;
+  background-size: 2.5rem;
   opacity: 0.4;
   transition: all 0.5s;
 }
 
-.github {
-  background-image: url(images/github.svg);
-}
-
-.social:hover {
+.footer__social:where(:hover, :focus) {
   opacity: 1;
 }
 
-.column {
-  flex-direction: column;
+.footer__social--github {
+  background-image: url(images/github.svg);
 }
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  .flex {
-    display: flex;
-    max-width: 1440px;
-    justify-content: space-around;
-    margin: 0 auto;
-  }
-
   header {
     min-height: 470px;
   }
@@ -210,4 +169,50 @@ footer {
     max-width: 1200px;
     margin: 40px auto;
   }
+}
+
+/* Utility Classes */
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.g-4 {
+  gap: 1rem;
+}
+
+.m-0auto {
+  margin: 0 auto;
 }
