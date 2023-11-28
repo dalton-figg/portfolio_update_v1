@@ -1,3 +1,8 @@
+:root {
+  --clr-dark: #333;
+  --clr-light: #f7f5f0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,10 +15,10 @@ html {
 }
 
 body {
-  color: #333;
+  color: var(--clr-dark);
+  background: var(--clr-light);
   margin: 0;
   line-height: 1.5;
-  background: #f7f5f0;
 }
 
 main {
@@ -42,8 +47,13 @@ a {
   color: #999;
 }
 
+a:where(:hover, :focus){
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .navbar {
-  background: black;
+  background: var(--clr-dark);
   height: 50px;
 }
 
@@ -83,7 +93,7 @@ a {
 }
 
 .location {
-  background-color: #333;
+  background-color: var(--clr-dark);
 }
 
 .card {
@@ -98,7 +108,7 @@ a {
 }
 
 .card:hover {
-  border-color: #302930;
+  border-color: var(--clr-dark);
 }
 
 .skills li {
@@ -199,6 +209,11 @@ a {
 
 .space-around {
   justify-content: space-around;
+}
+
+.center{
+  justify-content: center;
+  align-items: center;
 }
 
 .sticky {
