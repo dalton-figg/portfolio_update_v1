@@ -67,20 +67,27 @@ a:where(:hover, :focus) {
 }
 
 .navbar__list {
+  max-width: 1440px;
+  width: 100%;
   font-weight: 700;
   list-style-type: none;
+  padding: 1rem;
+}
+
+.navbar__list-item:first-child {
+  margin-right: auto;
 }
 
 .hero {
   background: url("images/hero-background-alt.jpg") no-repeat top center;
   background-size: cover;
   overflow: hidden;
+  padding: 2rem;
 }
 
 /* TODO: rename this image to be consistent with the BEM conventions - leaving it for now so that the grading passes corectly */
 
 .profile-image {
-  margin: 1.5rem auto;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -101,25 +108,21 @@ a:where(:hover, :focus) {
   margin: 0.5rem auto;
 }
 
-.location {
-  background-color: var(--clr-dark);
-}
-
-.cards{
-  padding: 1rem;
+.cards {
+  padding: 2rem 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .card {
-  margin: 2rem;
   padding: 2.5rem;
   max-width: 700px;
   width: 100%;
   background: #fff;
   border-bottom: 4px solid #ccc;
-  border-radius: 6px;
+  border-radius: 1rem;
   transition: all 0.35s ease;
 }
 
@@ -149,10 +152,12 @@ a:where(:hover, :focus) {
 }
 
 .footer {
+  margin: 0 auto;
+  max-width: 1440px;
   text-align: center;
   width: 100%;
   min-height: 30px;
-  padding: 1.25rem 0 2.5rem 1.25rem;
+  padding: 1.25rem;
 }
 
 .footer__copyright {
@@ -184,6 +189,10 @@ a:where(:hover, :focus) {
   header {
     min-height: 500px;
   }
+}
+
+.glide{
+  max-width: 1000px;
 }
 
 /* Utility Classes */

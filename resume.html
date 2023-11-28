@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Dalton's Resume</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="styles.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900"
       rel="stylesheet"
-    >
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css"
+    />
   </head>
   <body>
     <nav
@@ -24,40 +28,49 @@
     <main class="m-0auto">
       <h1 class="text-center">Resume</h1>
       <section>
-        <h2 class="text-center">About Me</h2>
-        <div class="flex">
-          <article class="card">
-            <h2>Expierence</h2>
-            <p>
-              I have a range of expierence with website development and have
-              worked on a range of large websites and with complex functionality
-              such as filtering systems and user login systems.
-            </p>
-            <p>
-              I have qualifications in Computer Science and Mathematics and
-              enjoy working with challenging algorithms
-            </p>
-          </article>
-          <article class="card">
-            <h2>Languages + Skills</h2>
-            <ul>
-              <li>JavaScript</li>
-              <li>HTML</li>
-              <li>PHP</li>
-              <li>CSS</li>
-              <li>SCSS</li>
-              <li>Tailwind</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h2>Hobbies</h2>
-            <ol>
-              <li>Chess</li>
-              <li>Photography</li>
-              <li>Game Development</li>
-            </ol>
-          </article>
-        </div>
+        <article>
+          <h2 class="text-underline">Expierence</h2>
+          <p>
+            I have a range of expierence with website development and have
+            worked on a range of large websites and with complex functionality
+            such as filtering systems and user login systems.
+          </p>
+          <p>
+            I have qualifications in Computer Science and Mathematics and enjoy
+            working with challenging algorithms
+          </p>
+        </article>
+        <article>
+          <h2 class="text-underline">Languages + Skills</h2>
+          <ol>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>PHP</li>
+            <li>CSS</li>
+            <li>SCSS</li>
+            <li>Tailwind</li>
+          </ol>
+        </article>
+        <article>
+          <h2 class="text-underline">Hobbies</h2>
+          <ol>
+            <li>Chess</li>
+            <li>Photography</li>
+            <li>Game Development</li>
+          </ol>
+        </article>
+        <article>
+          <h2 class="text-underline">Projects</h2>
+          <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide"><img src="http://placekitten.com/300" width="300" height="300" alt="placeholder"></li>
+                <li class="glide__slide"><img src="https://picsum.photos/300" width="300" height="300" alt="placeholder"></li>
+                <li class="glide__slide"><img src="https://placehold.co/300" width="300" height="300" alt="placeholder"></li>
+              </ul>
+            </div>
+          </div>
+        </article>
       </section>
       <section>
         <h2>Lorem ipsum dolor sit.</h2>
@@ -82,7 +95,7 @@
         <img
           src="images/resume-image.jpg"
           alt="Dark image of a barely open laptop with purple glowing screen"
-        >
+        />
       </section>
     </main>
     <footer class="footer">
@@ -94,5 +107,7 @@
       >
       <p class="footer__copyright">Copyright 2023, Dalton</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="app.js"></script>
   </body>
 </html>
