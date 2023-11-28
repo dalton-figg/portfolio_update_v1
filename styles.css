@@ -150,15 +150,11 @@ footer {
   padding: 20px 0 40px 20px;
 }
 
-footer .copyright {
+.copyright {
   font-size: 0.75em;
 }
 
-footer ul {
-  list-style-type: none;
-}
-
-a.social {
+.social {
   display: inline-block;
   text-indent: -9999px;
   margin-left: 5px;
@@ -170,14 +166,12 @@ a.social {
   transition: all 0.5s;
 }
 
-a.github {
+.github {
   background-image: url(images/github.svg);
 }
-a.social:hover {
+
+.social:hover {
   opacity: 1;
-}
-.clearfix {
-  clear: both;
 }
 
 .column {
