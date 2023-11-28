@@ -47,7 +47,7 @@ a {
   color: #999;
 }
 
-a:where(:hover, :focus){
+a:where(:hover, :focus) {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -75,7 +75,7 @@ a:where(:hover, :focus){
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  transition: all 0.85s ease-in;
+  transition: all 0.35s ease;
 }
 
 .profile-image:where(:hover, :focus) {
@@ -96,6 +96,13 @@ a:where(:hover, :focus){
   background-color: var(--clr-dark);
 }
 
+.cards{
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .card {
   margin: 2rem;
   padding: 2.5rem;
@@ -104,11 +111,18 @@ a:where(:hover, :focus){
   background: #fff;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
-  transition: all 0.5s;
+  transition: all 0.35s ease;
 }
 
 .card:hover {
   border-color: var(--clr-dark);
+}
+
+@media only screen and (min-width: 1024px) {
+  .cards {
+    align-items: initial;
+    flex-direction: row;
+  }
 }
 
 .skills li {
@@ -143,7 +157,7 @@ a:where(:hover, :focus){
   aspect-ratio: 1;
   background-size: 2.5rem;
   opacity: 0.4;
-  transition: all 0.5s;
+  transition: all 0.35s ease;
 }
 
 .footer__social:where(:hover, :focus) {
@@ -154,30 +168,9 @@ a:where(:hover, :focus){
   background-image: url(images/github.svg);
 }
 
-/* Styles for larger screens */
 @media screen and (min-width: 720px) {
   header {
-    min-height: 470px;
-  }
-
-  .nav {
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 30px;
-  }
-
-  main {
-    padding: 1.5rem;
-  }
-
-  main p {
-    line-height: 1.6em;
-  }
-
-  footer {
-    font-size: 1.3em;
-    max-width: 1200px;
-    margin: 40px auto;
+    min-height: 500px;
   }
 }
 
@@ -211,7 +204,7 @@ a:where(:hover, :focus){
   justify-content: space-around;
 }
 
-.center{
+.center {
   justify-content: center;
   align-items: center;
 }
