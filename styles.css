@@ -1,4 +1,6 @@
 :root {
+  /* Setting up CSS custom properties/variables improves the robustness of the project and allows for visual changes to be made relatively easily -> clr-dark could be renamed to clr-accent
+  and be used for any color to allow theme switches etc */
   --clr-dark: #333;
   --clr-light: #f7f5f0;
 }
@@ -9,8 +11,10 @@
 
 html {
   scroll-behavior: smooth;
+  /* Ensures font weights are generally consistent */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Multiple fallback fonts included */
   font-family: "Roboto", "Arial", system-ui, sans-serif;
 }
 
@@ -40,12 +44,16 @@ li {
 img {
   display: block;
   max-width: 100%;
+  /* Basic resets, including italic to differentiate any alt text that may be on the page */
+  font-style: italic;
 }
 
 a {
   text-decoration: none;
   color: #999;
 }
+
+/* Covers both hover and focus to improve accessibility for all users */
 
 a:where(:hover, :focus) {
   text-decoration: underline;
@@ -118,6 +126,8 @@ a:where(:hover, :focus) {
   border-color: var(--clr-dark);
 }
 
+/* Cards start of as one column then swap to two at a larger screen size - can also be achieved with grid */
+
 @media only screen and (min-width: 1024px) {
   .cards {
     align-items: initial;
@@ -154,6 +164,7 @@ a:where(:hover, :focus) {
   margin-left: 5px;
   max-width: 40px;
   width: 100%;
+  /* This show up as a W3C checker error, but is valid code and an open issue for the validator https://github.com/validator/validator/issues/1406 */
   aspect-ratio: 1;
   background-size: 2.5rem;
   opacity: 0.4;
