@@ -7,11 +7,29 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: "Roboto", sans-serif;
-  color: #222;
+  font-family: "Roboto", "Arial", system-ui, sans-serif;
+  color: #333;
+  line-height: 1.5;
   background: #f7f5f0;
 }
 /* Link Styles */
+
+h1,
+h2 {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
 
 a {
   text-decoration: none;
@@ -23,73 +41,66 @@ a:hover {
 
 /* Section Styles */
 
-.main-nav {
+.navbar {
   width: 100%;
   background: black;
-  min-height: 30px;
-  padding: 10px;
+  height: 50px;
   position: sticky;
-  text-align: center;
-}
-.nav {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar__list {
+  display: flex;
+  gap: 1rem;
   font-weight: 700;
   list-style-type: none;
   margin: 0 auto;
-  padding: 0;
 }
 
-.nav .name {
-  display: block;
-  margin-right: auto;
-  color: white;
-}
-.nav li {
-  padding: 5px 10px 10px 10px;
-}
-.nav a {
-  transition: all 0.5s;
-}
-.nav a:hover {
+.navbar__list-item:first-child {
   color: white;
 }
 
-header {
+.hero {
   text-align: center;
   background: url("images/hero-background.jpg") no-repeat top center;
   background-size: cover;
   overflow: hidden;
 }
-header {
-  line-height: 1.5;
-}
-header .profile-image {
+
+.profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
   transition: all 0.85s ease-in;
 }
-header .profile-image:hover {
+
+.profile-image:where(:hover, :focus) {
   transform: rotate(360deg);
   cursor: pointer;
 }
+
 .tag {
   background-color: #efefef;
   color: black;
   padding: 10px;
   border-radius: 5px;
-  display: table;
-  margin: 10px auto;
+  max-width: fit-content;
+  margin: 1rem auto;
 }
+
 .location {
-  background-color: #222;
-  color: yellow;
+  background-color: #333;
+  color: white;
 }
+
 .card {
-  margin: 30px;
-  padding: 20px 40px 40px;
+  margin: 2rem;
+  padding: 2.5rem;
   max-width: 500px;
   width: 100%;
   text-align: left;
@@ -98,12 +109,9 @@ header .profile-image:hover {
   border-radius: 6px;
   transition: all 0.5s;
 }
-.card:hover {
-  border-color: #ff99ff;
-}
 
-ul.skills {
-  padding: 0;
+.card:hover {
+  border-color: #302930;
 }
 
 .skills li {
@@ -112,7 +120,6 @@ ul.skills {
   background: #ff9904;
   color: white;
   padding: 5px 10px;
-  margin: 2px;
 }
 
 .skills li:nth-child(odd) {
@@ -126,27 +133,21 @@ footer {
 }
 
 footer .copyright {
-  top: -8px;
   font-size: 0.75em;
 }
 
 footer ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer ul li {
-  display: inline-block;
 }
 
 a.social {
   display: inline-block;
   text-indent: -9999px;
   margin-left: 5px;
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
+  max-width: 40px;
+  width: 100%;
+  aspect-ratio: 1;
+  background-size: 40px 40px;
   opacity: 0.4;
   transition: all 0.5s;
 }
@@ -176,6 +177,7 @@ a.social:hover {
 
   .nav {
     max-width: 1200px;
+    width: 100%;
     padding: 0 30px;
   }
 
