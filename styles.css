@@ -234,6 +234,8 @@ a:where(:hover, :focus) {
 
 .sticky {
   position: sticky;
+  top: 0;
+  /* Bad use of a utility - should ideally be seperate but is only used the navbar  */
 }
 
 .align-center {
