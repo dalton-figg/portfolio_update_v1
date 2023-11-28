@@ -88,10 +88,17 @@ a:where(:hover, :focus) {
 /* TODO: rename this image to be consistent with the BEM conventions - leaving it for now so that the grading passes corectly */
 
 .profile-image {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   transition: all 0.35s ease;
+}
+
+@media only screen and (min-width: 1024px){
+  .profile-image{
+    width: 150px;
+    height: 150px;
+  }
 }
 
 .profile-image:where(:hover, :focus) {
@@ -102,7 +109,6 @@ a:where(:hover, :focus) {
 .tag {
   color: white;
   text-decoration: none;
-  padding: 0.5rem;
   border-radius: 5px;
   max-width: fit-content;
   margin: 0.5rem auto;
@@ -137,6 +143,12 @@ a:where(:hover, :focus) {
     align-items: initial;
     flex-direction: row;
   }
+}
+
+.skills{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .skills li {
