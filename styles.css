@@ -1,13 +1,18 @@
-/* Global Layout Set-up */
+/* Global Reset */
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: "Roboto", "Arial", system-ui, sans-serif;
+}
+
+body {
   color: #333;
+  margin: 0;
   line-height: 1.5;
   background: #f7f5f0;
 }
@@ -42,8 +47,6 @@ img {
   display: block;
   max-width: 100%;
 }
-
-/* Link Styles */
 
 a {
   text-decoration: none;
