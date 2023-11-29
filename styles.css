@@ -94,8 +94,8 @@ a:where(:hover, :focus) {
   transition: all 0.35s ease;
 }
 
-@media only screen and (min-width: 1024px){
-  .profile-image{
+@media only screen and (min-width: 1024px) {
+  .profile-image {
     width: 150px;
     height: 150px;
   }
@@ -145,7 +145,7 @@ a:where(:hover, :focus) {
   }
 }
 
-.skills{
+.skills {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
